@@ -1,0 +1,62 @@
+
+graph = [
+    [0, 20, 0, 0, 0, 9, 0, 0],  
+    [20, 0, 0, 3, 0, 0, 0, 0],  
+    [0, 0, 0, 1, 0, 8, 0, 0],   
+    [0, 3, 1, 0, 7, 0, 0, 0],   
+    [0, 0, 0, 7, 0, 3, 0, 5],   
+    [9, 0, 8, 0, 3, 0, 26, 0],  
+    [0, 0, 0, 0, 0, 26, 0, 21], 
+    [0, 0, 0, 0, 5, 0, 21, 0]   
+]
+
+print("1) Матрица смежности:")
+for stroka in graph:
+    print(stroka)
+
+
+# 2) Кол-во вершин
+def top(graph):
+    count = 0
+    for i in graph:
+        if i:
+            count += 1
+    return count 
+print( "Кол-во вершин: " , top(graph)   )     
+
+
+# 3) Кол-во вершин, у которых степень 3
+def top_3(graph):
+    count = 0
+    for i in graph:
+        degree = 0
+        for j in i:
+            if j != 0:
+                degree += 1
+        if degree == 3:
+            count += 1
+    return count
+
+print(" Кол-во вершин со степенью 3:", top_3(graph) )
+# 4) Кол-во рёбер
+def edges(graph):
+    count = 0
+    for i in graph:
+        for j in i:
+            if j != 0:
+                count += 1
+    return count // 2
+
+print("Кол-во рёбер:" , edges(graph))
+
+# 5) Сумма весов всех рёбер
+def sum_ww(graph):
+    count = 0
+    for i in graph:
+        for j in i:
+            if j != 0:
+                count += j
+    return count // 2
+
+print("Сумма весов всех рёбер:" , sum_ww(graph) )
+
