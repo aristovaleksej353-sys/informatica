@@ -49,4 +49,17 @@ def sum_w(graph):
             if j != 0:
                 count += j
     return count // 2
-print("Сумма весов всех рёбер: ", sum_w(graph))
+print("Сумма весов всех рёбер: ", sum_w(graph)
+
+
+print("Соседи для графа ")
+count = 0
+for i in graph:
+    count_j = 0
+    for j in i:
+        if j != 0:
+            count +=1 
+            count_j += 1
+    print("Вершина", count, "соседи:", count_j)
+   
+
