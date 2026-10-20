@@ -60,3 +60,14 @@ def sum_ww(graph):
 
 print("Сумма весов всех рёбер:" , sum_ww(graph) )
 
+print("Соседи для графа ")
+count = 0
+for i in graph:
+    count_j = 0
+    for j in i:
+        if j != 0:
+            count +=1 
+            count_j += 1
+    print("Вершина", count, "соседи:", count_j)
+   
+
